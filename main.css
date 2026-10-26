@@ -247,6 +247,7 @@ img {
   background: rgba(255, 255, 255, 0.85);
   border: 1px solid #333;
   border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;
+  background: transparent url(./assets/ear_stand.png) center / contain no-repeat;
   cursor: pointer;
   font: inherit;
 }
