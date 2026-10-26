@@ -31,13 +31,14 @@ let animations = {
   sit: sit,
 };
 function renderAgent(agent: AgentLayout, i: number) {
-  const set = CHARACTERS[agent.character] || CHARACTERS.ear;
-  const newsrc = set[animation] || set.move;
   let { camera, center, me } = getState();
   if (agent.uuid == me.uuid) {
     agent = me;
   }
   let { pos, animation, facing, color, word } = agent;
+
+  const set = CHARACTERS[agent.character] || CHARACTERS.ear;
+  const newsrc = set[animation] || set.move;
 
   let relPos = Vector.add(Vector.subtract(pos, camera), center);
 
