@@ -30,8 +30,7 @@ export function CharacterSelect() {
         onMouseDown={stop}
         onTouchStart={stop}
       >
-        Change character
-      </button>
+        </button>
     );
   }
 
