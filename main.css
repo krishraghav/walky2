@@ -246,7 +246,7 @@ img {
   padding: 0.5rem 0.9rem;
   background: rgba(255, 255, 255, 0.85);
   border: 1px solid #333;
-  border-radius: 6px;
+  border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;
   cursor: pointer;
   font: inherit;
 }
