@@ -19,13 +19,14 @@ export function CharacterSelect() {
 
   return (
     <div className="character-select">
-      <h2>Choose your character</h2>
-      {Object.entries(CHARACTERS).map(([id, c]) => (
-        <button key={id} onClick={() => choose(id)}>
-          <img src={c.stand} alt={c.label} />
-          <span>{c.label}</span>
-        </button>
-      ))}
-    </div>
-  );
+  <h2>Choose your character</h2>
+  <div className="choices">
+    {Object.entries(CHARACTERS).map(([id, c]) => (
+      <button key={id} onClick={() => choose(id)}>
+        <img src={c.stand} alt={c.label} />
+        <span>{c.label}</span>
+      </button>
+    ))}
+  </div>
+</div>  );
 }
