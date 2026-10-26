@@ -26,6 +26,22 @@ function deconvertTarget(t: Matter.Vector) {
 }
 let mouseDown = false;
 function startInput() {
+  //added v2
+   const fakeInput = document.getElementById("fake-input") as HTMLInputElement;
+  if (fakeInput) {
+    fakeInput.setAttribute("autocomplete", "off");
+    fakeInput.setAttribute("autocorrect", "off");
+    fakeInput.setAttribute("autocapitalize", "off");
+    fakeInput.setAttribute("spellcheck", "false");
+
+    fakeInput.addEventListener("input", (event: any) => {
+      const { me } = getState();
+      if (!event.isComposing && fakeInput.value.length > 3) {
+        fakeInput.value = fakeInput.value.slice(-3);
+      }
+      me.word = fakeInput.value.slice(-3);
+    });
+  }
   window.addEventListener("stop", () => {
     state.me.target = state.me.pos;
   });
@@ -116,13 +132,14 @@ function startInput() {
     if (!me.word) {
       me.word = "";
     }
-    if (key.length == 1) {
+    const fromFakeInput = (event.target as HTMLElement)?.id === "fake-input";
+    if (key.length == 1 && !fromFakeInput) {
       if (me.word.length >= 3) {
         me.word = me.word.slice(1);
       }
       me.word += key;
     }
-    if (key == "Backspace" || key == "Delete") {
+    if ((key == "Backspace" || key == "Delete") && !fromFakeInput) {
       event.preventDefault();
       me.word = me.word.slice(0, me.word.length - 1);
     }
