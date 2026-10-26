@@ -22,6 +22,7 @@ let state: StateLayout = {
     animation: "stand",
     timeIdle: 0,
     color: Math.random() * 360,
+    character: localStorage.getItem("character") || "ear",
   },
   camera: { x: 0, y: 0 },
   frame: { x: 0, y: 0 },
