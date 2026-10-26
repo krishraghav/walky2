@@ -25,6 +25,7 @@ interface AgentLayout {
   timeIdle: number;
   color?: number;
   word?: string;
+  character?: string;
 }
 
 interface StateLayout {
