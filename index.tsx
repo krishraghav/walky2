@@ -1,4 +1,5 @@
 import { Render } from "./src/render";
+import { CharacterSelect } from "./src/CharacterSelect"
 import * as React from "react";
 import ReactDOM = require("react-dom");
 
