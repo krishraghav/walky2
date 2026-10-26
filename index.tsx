@@ -20,9 +20,12 @@ const rootElement = document.getElementById("window");
 ReactDOM.render(
   <React.StrictMode>
     <Render tick={tick} />
+    <CharacterSelect />
   </React.StrictMode>,
   rootElement
 );
+
+
 
 // // let debug = document.getElementById("debug");
 
