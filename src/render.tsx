@@ -39,7 +39,6 @@ function renderAgent(agent: AgentLayout, i: number) {
   }
   let { pos, animation, facing, color, word } = agent;
 
-  let newsrc = animations[animation] || walk;
   let relPos = Vector.add(Vector.subtract(pos, camera), center);
 
   return (
@@ -76,7 +75,7 @@ function renderAgent(agent: AgentLayout, i: number) {
           left: relPos.x,
           top: relPos.y,
           filter: set.tint ? `sepia(1) saturate(2.5) hue-rotate(${color}deg)` : undefined,
-          filter: `sepia(1) saturate(2.5) hue-rotate(${color}deg)`,
+          //filter: `sepia(1) saturate(2.5) hue-rotate(${color}deg)`,
           transform: `translate(-50%, -75%) scaleX(${facing ? -1 : 1})`,
           zIndex: Math.floor(10000 + pos.y),
         }}
