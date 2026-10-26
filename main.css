@@ -201,7 +201,7 @@ img {
   height: 200px;
   padding: 1rem;
   background: rgba(255, 255, 255, 0.25);
-  color: inherit;
+  color: black;
   border: 2px solid transparent;
   border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;   
   cursor: pointer;
