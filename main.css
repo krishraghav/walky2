@@ -243,6 +243,7 @@ img {
   left: 12px;
   top: 12px;
   height: 120px;
+  width: 120px;
   z-index: 999999;
   padding: 0.5rem 0.9rem;
   background: rgba(255, 255, 255, 0.85);
