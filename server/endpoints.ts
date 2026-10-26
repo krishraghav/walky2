@@ -17,7 +17,7 @@ function startEndpoints(PORT: number): http.Server {
   const httpServer = http.createServer(app);
 
   app.use(express.static("../docs"));
-  app.use("/files", express.static("./uploads"));
+  app.use("/files", express.static(path.join(__dirname, "uploads")));
 
   app.get("/claimed/:path?", async function (req, res) {
     let path = req.params.path ?? "";
