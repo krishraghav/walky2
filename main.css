@@ -200,7 +200,7 @@ img {
   width: 200px;                 
   height: 200px;
   padding: 1rem;
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.25);
   color: inherit;
   border: 2px solid transparent;
   border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;   
