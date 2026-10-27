@@ -11,7 +11,7 @@ import slimegfWalk from "../assets/slimegf_walk.gif";
   
 export const CHARACTERS = {
   ear:    { label: "ear",    stand: earStand,  move: earWalk,  sit: earSit,    tint: true },
-  evil:   { label: "evil",   stand: evilStand, move: evilWalk, sit: evilStand, tint: true },
+  evil:   { label: "monster voice",   stand: evilStand, move: evilWalk, sit: evilStand, tint: true },
   walker: { label: "larper", stand: stand1,    move: walk1,    sit: stand1,    tint: true },
   slimegf: {label: "slime gf gf", stand: slimegfStand, move: slimegfWalk, sit: slimegfSit, tint: true },
 };
