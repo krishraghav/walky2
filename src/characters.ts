@@ -6,8 +6,8 @@ import evilWalk from "../assets/evil_walk.gif";
 import stand1 from "../assets/stand1.gif";
 import walk1 from "../assets/walk1.gif";
 import slimegfStand from "../assets/slimegf_stand.png";
-import slimegfSit "../assets/slimegf_sit.png";
-import slimegfWalk "../assets/slimegf_walk.gif";
+import slimegfSit from "../assets/slimegf_sit.png";
+import slimegfWalk from "../assets/slimegf_walk.gif";
   
 export const CHARACTERS = {
   ear:    { label: "Ear",    stand: earStand,  move: earWalk,  sit: earSit,    tint: true },
