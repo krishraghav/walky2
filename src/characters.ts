@@ -13,5 +13,5 @@ export const CHARACTERS = {
   ear:    { label: "Ear",    stand: earStand,  move: earWalk,  sit: earSit,    tint: true },
   evil:   { label: "Evil",   stand: evilStand, move: evilWalk, sit: evilStand, tint: true },
   walker: { label: "Walker", stand: stand1,    move: walk1,    sit: stand1,    tint: true },
-  slimegf: {label: "Slime gf gf", stand: slimegfStand, move: slimegfWalk, sit: slimegfSit, tint: false },
+  slimegf: {label: "Slime gf gf", stand: slimegfStand, move: slimegfWalk, sit: slimegfSit, tint: true },
 };
