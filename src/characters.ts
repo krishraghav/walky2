@@ -11,7 +11,9 @@ import slimegfWalk from "../assets/slimegf_walk.gif";
 import bulletStand from "../assets/bullet_stand.gif";
 import bulletSit from "../assets/bullet_sit.png";
 import bulletWalk from "../assets/bullet_walk.gif";
-
+import benchStand from "../assets/bench_stand.png";
+import benchSit from "../assets/bench_sit.png";
+import benchWalk from "../assets/bench_walk.gif";
 
 export const CHARACTERS = {
   ear:    { label: "the og",    stand: earStand,  move: earWalk,  sit: earSit,    tint: true },
@@ -19,4 +21,5 @@ export const CHARACTERS = {
   walker: { label: "larper", stand: stand1,    move: walk1,    sit: stand1,    tint: true },
   slimegf: {label: "slime gf gf", stand: slimegfStand, move: slimegfWalk, sit: slimegfSit, tint: true },
   bullet: {label: "lost bullet", stand: bulletStand, move: bulletWalk, sit: bulletSit, tint: true },
+  bench: {label: "benchy", stand: benchStand, move: benchWalk, sit: benchSit, tint: false },
 };
