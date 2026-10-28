@@ -197,8 +197,8 @@ img {
   justify-content: center;
   animation: wobble 6s ease-in-out infinite;
   gap: 0.5rem;
-  width: 200px;                 
-  height: 200px;
+  width: 170px;                 
+  height: 170px;
   padding: 1rem;
   background: rgba(255, 255, 255, 0.25);
   color: black;
@@ -247,7 +247,7 @@ img {
   z-index: 999999;
   padding: 0.5rem 0.9rem;
   background: rgba(255, 255, 255, 0.85);
-  border: 1px solid #333;
+  border: 2px solid #333;
   border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;
   background: transparent url(./assets/ear_stand.png) center / contain no-repeat;
   cursor: pointer;
