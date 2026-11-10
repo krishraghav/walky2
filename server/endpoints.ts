@@ -12,7 +12,7 @@ import sendEmail from "./email";
 function startEndpoints(PORT: number): http.Server {
   const app = express();
   app.use(express.json());
-  app.use(express.urlencoded({ extended: true })); //Parse URL-encoded bodies
+  app.use(express.urlencoded({ extended: true })); 
 
   const httpServer = http.createServer(app);
 
@@ -23,7 +23,7 @@ function startEndpoints(PORT: number): http.Server {
     let path = req.params.path ?? "";
     const code = req.header("code");
 
-    // Query the space by path
+    
     const query = "SELECT id, email, path, code FROM space WHERE path = ?";
     const params = [path];
 
@@ -42,7 +42,7 @@ function startEndpoints(PORT: number): http.Server {
           return;
         }
 
-        // space was already saved in database.
+        
         res.status(200).send({ claimed: true, access: "none" });
       }
     });
@@ -54,7 +54,7 @@ function startEndpoints(PORT: number): http.Server {
     const code = req.body["code"];
     const opt = req.body["opt"];
 
-    // Query the space by path
+   
     const query = "SELECT id, email, path, code FROM space WHERE path = ?";
     const params = [path];
 
@@ -62,7 +62,7 @@ function startEndpoints(PORT: number): http.Server {
     db.all(query, params, (err: any, rows: string | any[]) => {
       if (err) return res.status(400).send(err);
 
-      // If space is not found, create an entry
+      
       if (rows.length === 0) {
         const insertQuery =
           "INSERT INTO space (path, email, code, opt) VALUES (?, ?, ?, ?)";
@@ -77,7 +77,7 @@ function startEndpoints(PORT: number): http.Server {
           }
         });
       } else {
-        // User was already saved in database.
+       
         console.log("User retrieved");
         res.status(200).send(rows[0]);
       }
